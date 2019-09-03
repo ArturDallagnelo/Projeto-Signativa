@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro Produtos</title>
+    <link rel="stylesheet" href="css/TelaCadastroProduto.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1>CADASTRO DE PRODUTOS</h1>
+    </header>
+ 
+    <section>   
+        <form action="gravar.php" method="POST" id="Form_CadastroProduto">
+            <div>
+                ID:     <input type="number" class="Itens"  id="ID"     placeholder="ID"    >
+                <span  class="mensagemErro erroID"></span>
+            </div>
+            
+            <div>
+                SKU:    <input type="number" class="Itens"  id="SKU"    placeholder="SKU"   >
+                <span  class="mensagemErro erroSKU"></span>
+            </div>
+            
+            <div>
+                Imagem: <input type="file"   class="Itens"  id="imagem"                     >
+                <span  class="mensagemErro erroImagem"></span>
+            </div>
+            
+            <div>
+                Marca:  <input type="text"   class="Itens"  id="marca"  placeholder="Marca" >
+                <span  class="mensagemErro erroMarca"></span>
+            </div>
+            
+            <div>
+                Nome:   <input type="text"   class="Itens"  id="nome"   placeholder="Nome"  >
+                <span  class="mensagemErro erroNome"></span>
+            </div>
+            
+                RH/LH:
+                <select class="comboBox" id="rhlh">
+                    <option value="R">RH</option>
+                    <option value="L">LH</option>
+                </select>
+            
+                Arco:
+                <select class="comboBox" id="arco">
+                    <option value="R">Recurvo</option>
+                    <option value="C">Composto</option>
+                </select>
+
+            <div>
+                Libragem: <input type="number"  class="Itens" id="libragem"  placeholder="Libragem">
+                <span  class="mensagemErro erroLibragem"></span>
+            </div>
+            
+            <div>
+                Preço:    <input type="number"  class="Itens" id="preco"     placeholder="Preço"   >          
+                <span  class="mensagemErro erroPreco"></span>
+            </div>
+
+            <div class="botao">
+                <input type="button" value="Cadastrar" onclick="cadastrar()">
+                <input type="button" value="Relatório" onclick="redirecionar()">
+            </div>
+        </form>
+    </section>
+
+    <script src="js/TelaCadastroProduto.js"></script>
+
+</body>
+
+</html>
